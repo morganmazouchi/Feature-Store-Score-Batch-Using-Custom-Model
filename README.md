@@ -1,1 +1,1 @@
-# Feature-Store-Score-Batch-Using-Custom-Model
+# Feature-Store-Score-Batch-Using-Custom-Module
