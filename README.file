@@ -1,0 +1,14 @@
+When creating custom modules in seperate notebooks from the notebook you want to use for inference, we recommend following below structure and make sure you are referencing the right parent path that holds the defined custom module as belo:
+
+repo/
+  src/
+     __init__.py
+     custom_module.py
+  test_from_src_file.py 
+
+--------------------------------------------------------------------------------------
+In test_from_src_file.py notebook you can import below module:
+
+import src.custom_module
+
+Please note when using fs.log_model() you must log the model with providing the full path to src folder, otherwise when running fs.batch_score() geting module not found error is expected to raise. 
